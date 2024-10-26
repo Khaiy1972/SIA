@@ -2,31 +2,29 @@
 <html>
   <head>
     <title>Your Name - Resume</title>
-    <link rel="stylesheet" href="onlineProfile.css" />
+    <link rel="stylesheet" href="{{url('css/welcomeStyle.css')}}" />
   </head>
   <body>
     <div class="container">
       <header class="header">
         <div class="full-name">
-          <span class="first-name">Nicko</span>
-          <span class="last-name">Palomo</span>
+          <span class="first-name">{{$data['nameFirst']}}</span>
+          <span class="last-name">{{$data['nameLast']}}</span>
 
-          <img class="profilePic" src="profile.png" alt="" />
+          <img class="profilePic" src="{{url('images/profile.png')}}" alt="" />
         </div>
         <div class="contact-info">
           <span class="email">Email: </span>
-          <span class="email-val">palomo.nicko@gmail.com</span>
+          <span class="email-val">{{$data['email']}}</span>
           <span class="separator"></span>
           <span class="phone">Phone: </span>
-          <span class="phone-val">09154872213</span>
+          <span class="phone-val">{{$data['contact']}}</span>
         </div>
 
         <div class="about">
-          <span class="position">Front-End & Back-End Developer </span>
+          <span class="position">{{$data['position']}}</span>
           <span class="desc">
-            I've been a front-end and back-end developer for a year, developing HTML, CSS,
-            JavaScript, React, and Node.js. I'm motivated, results-oriented, and looking
-            for a successful team-oriented organization with room to expand.
+          {{$data['positionDescription']}}
           </span>
         </div>
       </header>
@@ -37,14 +35,14 @@
           <div class="section__list">
             <div class="section__list-item">
               <div class="left">
-                <div class="name">Lori's Event</div>
-                <div class="addr">Tangos, Baliwag, Bulacan</div>
-                <div class="duration">Aug 2019 - current</div>
+                <div class="name">{{$data['experienceCompanyName']}}</div>
+                <div class="addr">{{$data['experienceCompanyAddress']}}</div>
+                <div class="duration">{{$data['experienceCompanyDuration']}}</div>
               </div>
 
               <div class="right">
-                <div class="name">Front and Back End developer</div>
-                <div class="desc">The main programer of the company</div>
+                <div class="name">{{$data['experienceCompanyPosition']}}</div>
+                <div class="desc">{{$data['experienceCompanyPositionDescription']}}</div>
               </div>
             </div>
           </div>
@@ -55,13 +53,13 @@
             <div class="section__list-item">
               <div class="left">
                 <div class="level">Collage</div>
-                <div class="name">Baliwag Polytechnic Collage</div>
-                <div class="addr">Baliwag, Bulacan</div>
-                <div class="duration">2021 - current</div>
+                <div class="name">{{$data['educationSchoolName']}}</div>
+                <div class="addr">{{$data['educationSchoolAddress']}}</div>
+                <div class="duration">{{$data['educationSchoolDuration']}}</div>
               </div>
               <div class="right">
                 <div class="level">Course</div>
-                <div class="name">Bachelor of Science in Information Technology</div>
+                <div class="name">{{$data['educationSchoolCourse']}}</div>
               </div>
             </div>
           </div>
@@ -70,11 +68,8 @@
           <div class="section__title">Projects</div>
           <div class="section__list">
             <div class="section__list-item">
-              <div class="name">Lori's Events Website</div>
-              <div class="text">
-                I am a front-end and back-end developer with this project. Maintaining the
-                elegance with security of the website.
-              </div>
+              <div class="name">{{$data['projectName']}}</div>
+              <div class="text">{{$data['educationPosition']}}</div>
             </div>
           </div>
         </div>
@@ -161,7 +156,7 @@
           <div class="section__title">Interests</div>
           <div class="section__list">
             <div class="section__list-item">
-              My interest are playing video games, programming, and chess
+            {{$data['interest']}}
             </div>
           </div>
         </div>
